@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".configs_activity.broker_activity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/logo_bonaire_app_sin_rs" />
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/bar"
+        android:background="#ccc"
+        android:padding="10dp">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="8dp"
+            app:cardCornerRadius="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="8dp"
+                android:paddingTop="18dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:id="@+id/txt_title_broker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="BROKER"
+                    android:textColor="#000000"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_nombre_disposistivo_broker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="Nombre dispositivo"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/txt_divider_broker"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/txt_title_broker"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="#000000" />
+
+                <TextView
+                    android:id="@+id/txt_subtitle_servidor_broker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_divider_broker"
+                    android:layout_marginTop="15dp"
+                    android:text="SERVIDOR: " />
+
+                <EditText
+                    android:id="@+id/txt_data_servidor_broker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_subtitle_servidor_broker"
+                    android:ems="15"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/txt_subtitle_user_broker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_data_servidor_broker"
+                    android:layout_marginTop="15dp"
+                    android:text="USUARIO: " />
+
+                <EditText
+                    android:id="@+id/txt_data_user_broker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_subtitle_user_broker"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/txt_subtitle_password_broker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_data_user_broker"
+                    android:layout_marginTop="15dp"
+                    android:text="CONTRASEÑA: " />
+
+                <EditText
+                    android:id="@+id/txt_data_password_broker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_subtitle_password_broker"
+                    android:ems="12"
+                    android:inputType="textPassword" />
+
+                <TextView
+                    android:id="@+id/txt_subtitle_port_broker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_data_password_broker"
+                    android:layout_marginTop="15dp"
+                    android:text="PUERTO: " />
+
+                <EditText
+                    android:id="@+id/txt_data_port_broker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_subtitle_port_broker"
+                    android:ems="8"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_data_port_broker"
+                    android:layout_above="@+id/btn_save_broker"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/info_config_reset"/>
+
+                <Button
+                    android:id="@+id/btn_save_broker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/colorPrimary"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:text="Enviar"
+                    android:onClick="fncBtnActualizarDatosBroker"/>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</RelativeLayout>

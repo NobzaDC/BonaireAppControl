@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.bonairecontrol">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".configs_activity.BqhConfigActivity"></activity>
+        <activity android:name=".configs_activity.AutomaticActivity" />
+        <activity android:name=".configs_activity.DefaultDevicesActivity" />
+        <activity android:name=".configs_activity.NameActivity" />
+        <activity android:name=".configs_activity.DimerActivity" />
+        <activity android:name=".configs_activity.PuntosDeCorteActivity" />
+        <activity android:name=".configs_activity.RelesActivity" />
+        <activity android:name=".CampanasActivity" />
+        <activity android:name=".DeshumidacadorActivity" />
+        <activity android:name=".consoleActivity" />
+        <activity android:name=".configs_activity.time_activity" />
+        <activity android:name=".configs_activity.manual_activity" />
+        <activity android:name=".CalendarActivity" />
+        <activity android:name=".transacBtDeviceListActivity" />
+
+        <meta-data
+            android:name="com.google.android.wearable.standalone"
+            android:value="true" />
+
+        <activity android:name=".configs_activity.settings_activity" />
+        <activity android:name=".configs_activity.servo_activity" />
+        <activity android:name=".graphics.graphicsActivity" />
+        <activity android:name=".graphics.graphicsListDataActivity" />
+        <activity android:name=".config_devices_activity" />
+        <activity android:name=".configs_activity.pwm_servo_activity" />
+        <activity android:name=".configs_activity.ozono_activity" />
+        <activity android:name=".configs_activity.dht_activity" />
+        <activity android:name=".configs_activity.desinfeccion_activity" />
+        <activity android:name=".configs_activity.purificacion_activity" />
+        <activity android:name=".configs_activity.internet_activity" />
+        <activity android:name=".configs_activity.broker_activity" />
+        <activity android:name=".configs_activity.date_time_activity" />
+        <activity
+            android:name=".config_master_detail_activity"
+            android:label="@string/title_activity_config_master_detail_activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Tech_ce_bt_activity" />
+        <activity android:name=".Bq_600_bt_activity" />
+        <activity android:name=".Tech_CeActivity" />
+        <activity android:name=".Bq_600Activity" />
+        <activity android:name=".ProfileActivy" />
+        <activity android:name=".AddActivity" />
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".message_services.BonaireFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".message_services.BonaireFirebaseInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ccc"
+    tools:context=".Tech_CeActivity">
+
+
+    <ImageView
+        android:id="@+id/logo_tech_ce_control"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/white"
+        app:srcCompat="@drawable/logo_bonaire_app" />
+
+    <View
+        android:id="@+id/divider_tech_ce"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/logo_tech_ce_control"
+        android:background="?android:attr/listDivider" />
+
+    <RelativeLayout
+        android:id="@+id/relative_layout_container1_tech_ce"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/divider_tech_ce"
+        android:padding="20dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/data_tech_ce"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:elevation="8dp"
+            app:cardCornerRadius="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/txt_nombre_equipo_tech_ce"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="Tech_CE"
+                    android:textAlignment="textStart"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_location_tech_ce"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/txt_nombre_equipo_tech_ce"
+                    android:layout_above="@+id/divider_data_tech_ce"
+                    android:textAlignment="center"/>
+
+                <TextView
+                    android:id="@+id/divider_data_tech_ce"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/txt_nombre_equipo_tech_ce"
+                    android:layout_alignStart="@+id/txt_nombre_equipo_tech_ce"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#000000" />
+
+                <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                    android:id="@+id/sr_tech_ce"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/divider_data_tech_ce"
+                    android:layout_above="@+id/tv_title_reload_tech_ce">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rl_list_datos"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+                <TextView
+                    android:id="@+id/tv_title_reload_tech_ce"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/tv_next_reload_tech_ce"
+                    android:text="Tiempo restante para actualizar automáticamente en: "/>
+
+                <TextView
+                    android:id="@+id/tv_next_reload_tech_ce"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:textColor="@color/colorAccent"
+                    android:text="Calculando..."/>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</RelativeLayout>

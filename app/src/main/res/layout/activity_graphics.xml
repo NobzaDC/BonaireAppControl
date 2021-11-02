@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ccc"
+    tools:context=".graphics.graphicsActivity">
+
+    <ImageView
+        android:id="@+id/banner_graphics"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/white"
+        app:srcCompat="@drawable/logo_bonaire_app" />
+
+    <TextView
+        android:id="@+id/divider_graphics_tech_ce"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/banner_graphics"
+        android:background="@android:color/black"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/divider_graphics_tech_ce"
+        android:layout_above="@+id/cv_bottom"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="10dp"
+        app:cardCornerRadius="8dp"
+        android:elevation="8dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txt_title_grafico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textAlignment="center"
+                android:text="Grafico"
+                android:layout_marginStart="8dp"
+                android:layout_weight="8"/>
+
+            <TextView
+                android:id="@+id/tv_ubication_graphics"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="12dp"
+                android:text="Ubicación:"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:layout_below="@+id/txt_title_grafico"/>
+
+            <TextView
+                android:id="@+id/tv_data_ubication_graphics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="12dp"
+                android:layout_toRightOf="@+id/tv_ubication_graphics"
+                android:text="-"
+                android:layout_below="@+id/txt_title_grafico"/>
+
+            <TextView
+                android:id="@+id/tv_last_report_graphics"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="12dp"
+                android:text="Ultimo reporte:"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:layout_below="@+id/tv_data_ubication_graphics"/>
+
+            <TextView
+                android:id="@+id/tv_data_last_report_graphics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="12dp"
+                android:layout_toRightOf="@+id/tv_last_report_graphics"
+                android:text="-"
+                android:layout_below="@+id/tv_data_ubication_graphics"/>
+
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/graphic_chart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/linear_layout_container"
+                android:layout_below="@id/tv_data_last_report_graphics"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:id="@+id/linear_layout_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/tabla_de_medida" />
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/btn_refresh_graphic"
+                    android:src="@drawable/ic_baseline_update"
+                    android:layout_alignParentRight="true"
+                    android:background="@android:color/white"
+                    android:layout_weight="3"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="10dp"
+        app:cardCornerRadius="8dp"
+        android:elevation="8dp"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn_show_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ver estado actual"
+                android:layout_marginVertical="8dp"
+                android:layout_marginHorizontal="18dp"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/white"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

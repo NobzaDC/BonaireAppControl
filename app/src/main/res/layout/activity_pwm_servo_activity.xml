@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".configs_activity.pwm_servo_activity">
+
+    <com.google.android.material.appbar.AppBarLayout
+    android:id="@+id/bar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/AppTheme.AppBarOverlay">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/logo_bonaire_app_sin_rs" />
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+</com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/bar"
+        android:background="#ccc"
+        android:padding="10dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="8dp"
+            app:cardCornerRadius="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="8dp"
+                android:paddingTop="18dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:id="@+id/txt_title_servo_pwm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="PWM"
+                    android:textColor="#000000"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_nombre_disposistivo_servo_pwm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="Nombre dispositivo"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/txt_divider_servo_pwm"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/txt_title_servo_pwm"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="#000000"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_valor_a_servo_pwm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_divider_servo_pwm"
+                    android:layout_marginTop="25dp"
+                    android:text="VALOR A: "
+                    android:textColor="@android:color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txt_data_valor_a_servo_pwm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_valor_a_servo_pwm"
+                    android:layout_marginTop="8dp"
+                    android:ems="5"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/txt_valor_b_servo_pwm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_divider_servo_pwm"
+                    android:layout_alignStart="@+id/txt_data_valor_b_servo_pwm"
+                    android:layout_marginTop="25dp"
+                    android:text="VALOR B: "
+                    android:textColor="@android:color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txt_data_valor_b_servo_pwm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_valor_a_servo_pwm"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@+id/txt_data_valor_a_servo_pwm"
+                    android:ems="5"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/txt_valor_c_desinfeccion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_divider_servo_pwm"
+                    android:layout_alignStart="@+id/txt_data_valor_c_servo_pwm"
+                    android:layout_marginTop="25dp"
+                    android:text="VALOR C: "
+                    android:textColor="@android:color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txt_data_valor_c_servo_pwm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_valor_a_servo_pwm"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@+id/txt_data_valor_b_servo_pwm"
+                    android:ems="5"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/txt_valor_max_servo_pwm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_data_valor_c_servo_pwm"
+                    android:layout_marginTop="25dp"
+                    android:text="VALOR MAX: "
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txt_data_valor_max_servo_pwm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_valor_max_servo_pwm"
+                    android:layout_marginTop="8dp"
+                    android:ems="8"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/txt_valor_min_servo_pwm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_data_valor_c_servo_pwm"
+                    android:layout_alignStart="@+id/txt_data_valor_min_servo_pwm"
+                    android:layout_marginTop="25dp"
+                    android:text="VALOR MIN: "
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txt_data_valor_min_servo_pwm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_valor_max_servo_pwm"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@+id/txt_data_valor_max_servo_pwm"
+                    android:ems="8"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_data_valor_min_servo_pwm"
+                    android:layout_above="@+id/btn_save_desinfeccion"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/info_config_reset"/>
+
+                <Button
+                    android:id="@+id/btn_save_desinfeccion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/colorPrimary"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:text="Enviar"
+                    android:onClick="fncBtnSave"/>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</RelativeLayout>

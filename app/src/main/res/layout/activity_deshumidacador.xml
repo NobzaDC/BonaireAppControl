@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#ccc"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DeshumidacadorActivity">
+
+    <ImageView
+        android:id="@+id/logo_deshumidificador_control"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/white"
+        app:srcCompat="@drawable/logo_bonaire_app" />
+
+
+    <View
+        android:id="@+id/divider_deshumidificador"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/logo_deshumidificador_control"
+        android:background="?android:attr/listDivider" />
+
+    <RelativeLayout
+        android:id="@+id/relative_layout_container1_deshumidificador"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/divider_deshumidificador"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="20dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/data_deshumidificador"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15dp"
+            android:background="@android:color/white"
+            android:elevation="8dp"
+            app:cardCornerRadius="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:id="@+id/linear_eliminador"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_nombre_equipo_deshumidificador"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="Eliminador de humo"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_description_eliminador"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linear_eliminador"
+                    android:text="Conectado: detectando... - Operación: detectando... "
+                    android:textAlignment="center"
+                    android:textColor="#ccc"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/divider_data_deshumidificador"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/txt_description_eliminador"
+                    android:layout_alignStart="@+id/linear_eliminador"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@android:color/black"/>
+
+                <LinearLayout
+                    android:id="@+id/datos_json"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/divider_data_deshumidificador"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginHorizontal="8dp"
+                            android:textStyle="bold"
+                            android:textColor="#000000"
+                            android:textAlignment="center"
+                            android:textSize="14sp"
+                            android:text="Temperatura"/>
+
+                        <!--TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginHorizontal="8dp"
+                            android:textStyle="bold"
+                            android:textColor="#000000"
+                            android:textAlignment="center"
+                            android:textSize="14sp"
+                            android:text="Humedad"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginHorizontal="8dp"
+                            android:textStyle="bold"
+                            android:textColor="#000000"
+                            android:textAlignment="center"
+                            android:textSize="14sp"
+                            android:text="Ozono"/-->
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="8dp">
+
+                        <TextView
+                            android:id="@+id/tv_temperatura"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginHorizontal="8dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimary"
+                            android:textAlignment="center"
+                            android:textSize="14sp"
+                            android:text="--"/>
+
+                        <!--TextView
+                            android:id="@+id/tv_humedad"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginHorizontal="8dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimary"
+                            android:textAlignment="center"
+                            android:textSize="14sp"
+                            android:text="-"/>
+
+                        <TextView
+                            android:id="@+id/tv_ozono"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginHorizontal="8dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimary"
+                            android:textAlignment="center"
+                            android:textSize="14sp"
+                            android:text="-"/-->
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginHorizontal="8dp"
+                            android:textStyle="bold"
+                            android:textColor="#000000"
+                            android:textAlignment="center"
+                            android:textSize="14sp"
+                            android:text="PM-10"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginHorizontal="8dp"
+                            android:textStyle="bold"
+                            android:textColor="#000000"
+                            android:textAlignment="center"
+                            android:textSize="14sp"
+                            android:text="PM-2.5"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginHorizontal="8dp"
+                            android:textStyle="bold"
+                            android:textColor="#000000"
+                            android:textAlignment="center"
+                            android:textSize="14sp"
+                            android:text="PM-1"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_pm10_des"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginHorizontal="8dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimary"
+                            android:textAlignment="center"
+                            android:textSize="14sp"
+                            android:text="--"/>
+
+                        <TextView
+                            android:id="@+id/tv_pm25_des"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="8dp"
+                            android:layout_weight="1"
+                            android:text="--"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_pm1_des"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginHorizontal="8dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimary"
+                            android:textAlignment="center"
+                            android:textSize="14sp"
+                            android:text="--"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/rl_buttons"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/datos_json"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="30dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_ventilacion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginVertical="15dp"
+                            android:layout_marginHorizontal="10dp"
+                            android:elevation="8dp"
+                            app:cardCornerRadius="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#000000"
+                                    android:textAlignment="center"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    android:text="@string/extraccion"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="#ccc"
+                                    android:layout_marginHorizontal="3dp"/>
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ventilacion_ico"
+                                    android:scaleType="fitCenter"/>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_eliminacion_humo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginVertical="15dp"
+                            android:layout_marginHorizontal="10dp"
+                            android:elevation="8dp"
+                            app:cardCornerRadius="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#000000"
+                                    android:textAlignment="center"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    android:text="@string/eliminacion_humo"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="#ccc"
+                                    android:layout_marginHorizontal="3dp"/>
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/eliminar_humo_ico"
+                                    android:scaleType="fitCenter"/>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cv_apagado_total"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginVertical="15dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:elevation="8dp"
+                        app:cardCornerRadius="8dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="#000000"
+                                android:textAlignment="center"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:text="Apagado total"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#ccc"
+                                android:layout_marginHorizontal="3dp"/>
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/boton_apagodo_ico"
+                                android:scaleType="fitCenter"/>
+
+                        </LinearLayout>
+
+
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_default_devices_deshumidificador"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!--TextView
+            android:id="@+id/txt_control_funciones_deshumidificador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/divider_button_deshumidificador"
+            android:layout_marginTop="20dp"
+            android:text="CONTROL DE FUNCIONES"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+        <View
+            android:id="@+id/divider_button_deshumidificador"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@+id/cv_comands_deshumidificador"
+            android:layout_alignStart="@+id/txt_control_funciones_deshumidificador"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="25dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="@android:color/black" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_comands_deshumidificador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:cardCornerRadius="18dp"
+            android:elevation="18dp"
+            android:layout_marginBottom="25dp">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/divider_button_deshumidificador"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Switch
+                        android:id="@+id/switch_begin_ventilacion_deshumidificador"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_alignParentTop="true"
+                        android:text="Ventilación"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                    <Switch
+                        android:id="@+id/switch_begin_deshumidificador"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_below="@+id/switch_begin_ventilacion_deshumidificador"
+                        android:text="Eliminación de humo "
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                    <Switch
+                        android:id="@+id/switch_stop_deshumidificador"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/switch_begin_deshumidificador"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginBottom="18dp"
+                        android:text="Apagar"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                    <Button
+                        android:id="@+id/btn_exec_action_deshumidificador"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/white"
+                        android:text="Ejecutar"
+                        android:layout_toRightOf="@+id/switch_begin_deshumidificador"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="8dp"
+                        android:layout_below="@+id/switch_begin_ventilacion_deshumidificador"
+                        android:background="@color/colorPrimary"
+                        android:layout_marginStart="8dp"/>
+
+                </RelativeLayout>
+            </RadioGroup>
+        </androidx.cardview.widget.CardView-->
+    </RelativeLayout>
+
+
+</RelativeLayout>

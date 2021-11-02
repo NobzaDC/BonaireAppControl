@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ccc"
+    tools:context=".ui.configurations.ConfigurationsFragment">
+
+    <ImageView
+        android:id="@+id/img_logo_config_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        app:srcCompat="@drawable/logo_bonaire_app"
+        android:background="@android:color/white"/>
+
+    <View
+        android:id="@+id/divider_config_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/img_logo_config_fragment"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/txt_title_config_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:background="@android:color/white"
+        android:layout_below="@id/divider_config_fragment"
+        android:text="DISPOSITIVOS "/>
+
+    <ListView
+        android:id="@+id/list_view_bluetooth_devices_config_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_title_config_fragment"/>
+
+    <ImageView
+        android:id="@+id/img_card_view_config_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_title_config_fragment"
+        android:layout_alignParentBottom="true"
+        app:srcCompat="@drawable/img_p_agregar"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar_config_fragment"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"/>
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/baseline_home_24"
+            android:title="@string/menu_home"/>
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/baseline_devices_24"
+            android:title="@string/menu_gallery" />
+        <item
+            android:id="@+id/calendarFragment"
+            android:icon="@drawable/baseline_event_24"
+            android:title="@string/menu_calendar"/>
+        <item
+            android:id="@+id/nav_config"
+            android:icon="@drawable/ic_config"
+            android:title="@string/menu_config"/>
+        <!--item
+            android:id="@+id/smokeListFragment"
+            android:icon="@drawable/ic_cloud_off"
+            android:title="@string/menu_smoke"/-->
+        <item
+            android:id="@+id/show_config"
+            android:icon="@drawable/ic_baseline_save_24"
+            android:title="@string/cambiar_dispositivos"/>
+    </group>
+</menu>

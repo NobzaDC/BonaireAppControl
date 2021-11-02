@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ccc"
+    tools:context=".consoleActivity">
+
+    <RelativeLayout
+        android:id="@+id/banner_header"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:id="@+id/img_header_console"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/logo_bonaire_app" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/img_header_console"
+            android:background="@android:color/black" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/banner_header"
+        android:paddingHorizontal="18dp"
+        android:paddingVertical="8dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_console_console"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="8dp"
+            android:elevation="8dp"
+            app:cardElevation="8dp"
+            android:layout_above="@+id/cv_comands_console"
+            android:layout_marginBottom="18dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:text="Consola Bluetooth"
+                    android:paddingHorizontal="8dp"
+                    android:paddingTop="12dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="8dp"
+                    android:background="@android:color/black"
+                    android:layout_marginBottom="18dp"/>
+
+                <TextView
+                    android:id="@+id/tv_console_console"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginBottom="18dp"
+                    android:paddingStart="8dp"
+                    android:paddingTop="8dp"
+                    android:scrollbars = "vertical"
+                    android:textColor="@color/colorPrimary"
+                    android:text="..."/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_comands_console"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:cardCornerRadius="8dp"
+            android:elevation="8dp"
+            app:cardElevation="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+                <EditText
+                    android:id="@+id/et_message_console"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:layout_toLeftOf="@+id/btn_send_console"
+                    android:layout_margin="8dp"/>
+                <Button
+                    android:id="@+id/btn_send_console"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="enviar"
+                    android:background="@color/colorPrimary"
+                    android:textColor="@android:color/white"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="8dp"/>
+                <Button
+                    android:id="@+id/btn_clean_console"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="limpiar"
+                    android:background="@color/colorPrimary"
+                    android:textColor="@android:color/white"
+                    android:layout_below="@+id/btn_send_console"
+                    android:layout_margin="8dp"/>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

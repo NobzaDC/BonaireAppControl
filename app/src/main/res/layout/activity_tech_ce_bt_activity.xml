@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ccc"
+    tools:context=".Tech_ce_bt_activity">
+
+    <ImageView
+        android:id="@+id/logo_tech_ce_bt_control"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/white"
+        app:srcCompat="@drawable/logo_bonaire_app" />
+
+
+    <View
+        android:id="@+id/divider_tech_ce_bt"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/logo_tech_ce_bt_control"
+        android:background="?android:attr/listDivider" />
+
+    <RelativeLayout
+        android:id="@+id/relative_layout_container1_tech_ce_bt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/divider_tech_ce_bt"
+        android:padding="10dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/data_tech_ce_bt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:layout_above="@+id/cv_to_devices_tech_ce"
+            android:layout_marginBottom="10dp"
+            android:elevation="8dp"
+            app:cardCornerRadius="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/txt_nombre_equipo_tech_ce_bt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="Tech Ce Bluetooth"
+                    android:textAlignment="textStart"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_title_last_report_tech_ce"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:text="Ultimo reporte:"
+                    android:layout_marginRight="3dp"
+                    android:textColor="@android:color/black"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/txt_nombre_equipo_tech_ce_bt"/>
+
+
+                <TextView
+                    android:id="@+id/txt_data_ultimo_reporte"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/divider_data_tech_ce_bt"
+                    android:layout_below="@+id/txt_nombre_equipo_tech_ce_bt"
+                    android:layout_toRightOf="@+id/tv_title_last_report_tech_ce"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:text="00 : 00 : 00"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/divider_data_tech_ce_bt"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/tv_title_last_report_tech_ce"
+                    android:layout_alignStart="@+id/txt_nombre_equipo_tech_ce_bt"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="#000000" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_list_tech_ce_bt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/divider_data_tech_ce_bt"/>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_to_devices_tech_ce"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:cardCornerRadius="18dp"
+            android:elevation="18dp"
+            android:layout_marginBottom="25dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_default_devices_tech_ce"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"/>
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+</RelativeLayout>

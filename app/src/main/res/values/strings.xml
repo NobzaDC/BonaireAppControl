@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Bonaire APP Control</string>
+    <string name="title_activity_home">Bonaire APP</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Bonaire Tech</string>
+    <string name="nav_header_subtitle">bonaire.tech@example.com</string>
+    <string name="nav_header_desc">Medición, control y tratamiento de aire</string>
+    <string name="action_settings">Settings</string>
+    <string name="tech_ce">B-TECH-CE</string>
+    <string name="menu_home">Inicio</string>
+    <string name="menu_gallery">Información Equipos</string>
+    <string name="menu_config">Configuración general</string>
+    <string name="menu_smoke">Eliminador de humo</string>
+    <string name="menu_grafics">Variables del ambiente</string>
+    <string name="menu_calendar">Agendar Funciones</string>
+    <string name="link_recovery_password"><a href="http://bonaire.net.co">Olvidó su clave? click aquí</a></string>
+    <string name="grupo_empresarial">Grupo Empresarial Bonaire</string>
+    <string name="title_testmasterdetail_list">TestMasterDetails</string>
+    <string name="title_testmasterdetail_detail">TestMasterDetail Detail</string>
+    <string name="title_activity_config">configActivity</string>
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_config_master_detail_activity">Configuraciones </string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="url_base_api">http://98.142.103.253:8080/</string>
+    <string name="version">1.0.210622</string>
+    <string name="title_activity_graphics_tech_ce">graphicsTechCeActivity</string>
+    <string name="hello_world">Hello Square World!</string>
+    <string name="title_activity_settings_activity">settings_activity</string>
+    <string name="description">Especifique el valor de ajuste</string>
+    <string name="info_config_reset">Tenga en cuenta que después de enviar se reiniciará el equipo así que será necesario uno o dos minutos antes de poder enviar un nuevo dato.</string>
+    <string name="eliminador_de_humo">Bonaire-BQH</string>
+    <string name="bonaire_tech_ce">Bonaire-TECH</string>
+    <string name="campanas_inteligentes">Campanas inteligentes</string>
+    <string name="b_q600">Bonaire-BQD</string>
+    <string name="bonaire_bqv">Bonaire-BQV</string>
+    <string name="descripcion_bonaire_bqd">DESINFECTA Y RENUEVA \nRenueva el aire de un espacio interior, además realiza la desinfección de objetos, superficies y áreas sin productos químicos brindando la tranquilidad de estar en un espacio seguro.</string>
+    <string name="descripcion_bonaire_bqh">ELIMINADOR DE HUMO Y OLORES \nRetiene y eliminar toda partículas de humo emitida en el procesamiento y elaboración de alimentos o productos, material particulado, compuestos orgánicos volátiles.</string>
+    <string name="descripcion_bonaire_bqv">DESINFECCIÓN DE DUCTOS EN SISTEMAS DE VENTILACIÓN \nRetiene impurezas provenientes de sistemas de calefacción, refrigeración y aires acondicionados, sin utilizar filtros desinfectando los conductos de distribución y manteniéndolos libres de virus, baterías y otros contaminantes.</string>
+    <string name="descripcion_bonaire_tech">MONITOREA ESPACIOS INTERIORES \nDiseñado para reportar y monitorear hasta 12 variables ambientales en espacios interiores y se vincula con la plataforma tecnológica BonaireCloud con la finalidad de recopilar, controlar y entregar informes de todos nuestros equipos.</string>
+    <string name="cambiar_dispositivos">Configurar equipos</string>
+    <string name="extraccion">Extracción</string>
+    <string name="eliminacion_humo">Eliminación de humo</string>
+
+</resources>

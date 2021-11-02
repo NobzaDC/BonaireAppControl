@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "399387150182",
+    "project_id": "bonairetech-ac955",
+    "storage_bucket": "bonairetech-ac955.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:399387150182:android:696b6af4130bdcd9c26aa7",
+        "android_client_info": {
+          "package_name": "com.example.bonairecontrol"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "399387150182-m6nuocdj1pqciod51hn3tteiqladet8s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjirqqXT2g_gED56bSk4vvAufNrIj8jxU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "399387150182-m6nuocdj1pqciod51hn3tteiqladet8s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

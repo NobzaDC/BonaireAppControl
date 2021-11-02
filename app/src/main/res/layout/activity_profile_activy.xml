@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivy">
+
+    <RelativeLayout
+        android:id="@+id/banner_header"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/white">
+
+        <ImageButton
+            android:id="@+id/btn_config"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/white"
+            android:onClick="fncBtnConfig"
+            android:src="@drawable/baseline_settings_24" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/btn_config"
+            app:srcCompat="@drawable/logo_bonaire_app" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/divider_header"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        android:layout_below="@id/banner_header"/>
+
+    <TextView
+        android:id="@+id/txt_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:text="Nombre: "
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/divider_header"/>
+
+    <TextView
+        android:id="@+id/txt_data_nombre_usuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text=" - "
+        android:layout_toRightOf="@+id/txt_nombre"
+        android:layout_marginTop="23dp"
+        android:layout_below="@+id/divider_header"/>
+
+    <TextView
+        android:id="@+id/txt_correo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:text="Correo: "
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/txt_data_nombre_usuario"/>
+
+    <TextView
+        android:id="@+id/txt_data_nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text=" - "
+        android:layout_toRightOf="@+id/txt_correo"
+        android:layout_marginTop="35dp"
+        android:layout_below="@+id/txt_data_nombre_usuario"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/btn_cerrar_sesion"
+        android:background="#ccc"/>
+
+    <Button
+        android:id="@+id/btn_cerrar_sesion"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_above="@+id/bottom_navigation_bar"
+        android:background="@android:color/white"
+        android:onClick="fncBtnCerrarSesion"
+        android:text="CERRAR SESION"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="24dp" />
+
+    <TextView
+        android:id="@+id/txt_version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="28dp"
+        android:text="V 1.0.0"
+        android:layout_above="@+id/btn_cerrar_sesion"
+        android:layout_marginBottom="8dp"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-2dp"
+        app:itemBackground="@color/colorPrimary"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:menu="@menu/menu_bottom_navigation_bar" />
+</RelativeLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <pl.pawelkleczkowski.customgauge.CustomGauge
+        android:id="@+id/customGauge"
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:layout_below="@+id/img_medidas"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="-30dp"
+        app:gaugeEndValue="800"
+        app:gaugePointEndColor="#08FF00"
+        app:gaugePointStartColor="#08FF00"
+        app:gaugeStartAngle="180"
+        app:gaugeStartValue="0"
+        app:gaugeStrokeCap="ROUND"
+        app:gaugeStrokeColor="#ccc"
+        app:gaugeStrokeWidth="18dp"
+        app:gaugeSweepAngle="180" />
+
+    <TextView
+        android:id="@+id/tv_value_graphic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="130dp"
+        android:layout_below="@+id/img_medidas"
+        android:text="00"
+        android:textSize="34sp"
+        android:textAlignment="center"/>
+
+    <ImageView
+        android:id="@+id/img_medidas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/tabla_de_medida"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="8dp"/>
+
+</RelativeLayout>

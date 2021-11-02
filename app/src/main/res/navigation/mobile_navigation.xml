@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.bonairecontrol.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.bonairecontrol.ui.devices.DevicesFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_devices" />
+    <fragment
+        android:id="@+id/nav_config"
+        android:name="com.example.bonairecontrol.ui.configurations.ConfigurationsFragment"
+        android:label="@string/menu_config"
+        tools:layout="@layout/configurations_fragment" />
+    <fragment
+        android:id="@+id/graficsFragment"
+        android:name="com.example.bonairecontrol.ui.grafics.graficsFragment"
+        android:label="@string/menu_grafics"
+        tools:layout="@layout/fragment_grafics" />
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="com.example.bonairecontrol.ui.calendar.CalendarFragment"
+        android:label="@string/menu_calendar"
+        tools:layout="@layout/fragment_calendar" />
+    <fragment
+        android:id="@+id/smokeListFragment"
+        android:name="com.example.bonairecontrol.ui.smoke.SmokeListFragment"
+        android:label="Eliminador de humo"
+        tools:layout="@layout/fragment_smoke_list" />
+    <fragment
+        android:id="@+id/campanasFragment"
+        android:name="com.example.bonairecontrol.ui.campanas.CampanasFragment"
+        android:label="Campanas"
+        tools:layout="@layout/fragment_campanas" />
+
+</navigation>

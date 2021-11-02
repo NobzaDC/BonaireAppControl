@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".configs_activity.date_time_activity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/logo_bonaire_app_sin_rs" />
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/bar"
+        android:background="#ccc"
+        android:padding="10dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="8dp"
+            app:cardCornerRadius="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="8dp"
+                android:paddingTop="18dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:id="@+id/txt_title_date_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="FECHA Y HORA"
+                    android:textColor="#000000"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_nombre_disposistivo_date_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="Nombre dispositivo"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/txt_divider_date_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/txt_title_date_time"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="#000000" />
+
+                <TextView
+                    android:id="@+id/txt_info_1_date_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_divider_date_time"
+                    android:text="Usar fecha y hora actual"
+                    android:textSize="18sp" />
+
+                <Switch
+                    android:id="@+id/switch_txt_info_1_date_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_divider_date_time"
+                    android:layout_alignParentRight="true"
+                    android:layout_toRightOf="@id/txt_info_1_date_time"
+                    android:onClick="fncSwitchListener"
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+
+
+                <TextView
+                    android:id="@+id/txt_subtitle_date_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_info_1_date_time"
+                    android:layout_marginTop="50dp"
+                    android:text="Ingresar Fecha y hora manualmente"
+                    android:textColor="#000000"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/txt_subdivider_date_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/txt_subtitle_date_time"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="#000000" />
+
+                <!--Año, mes, dia-->
+
+                <TextView
+                    android:id="@+id/txt_title_año_date_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_subdivider_date_time"
+                    android:layout_marginTop="35dp"
+                    android:text="Año:"
+                    android:textSize="12dp" />
+
+                <EditText
+                    android:id="@+id/txt_data_año_date_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_title_año_date_time"
+                    android:ems="5"
+                    android:enabled="false"
+                    android:inputType="number"
+                    tools:ignore="TextFields" />
+
+                <TextView
+                    android:id="@+id/txt_title_mes_date_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_subdivider_date_time"
+                    android:layout_alignStart="@+id/txt_data_mes_date_time"
+                    android:layout_marginTop="35dp"
+                    android:text="Mes:"
+                    android:textSize="12dp" />
+
+                <EditText
+                    android:id="@+id/txt_data_mes_date_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_title_mes_date_time"
+                    android:layout_marginLeft="18dp"
+                    android:layout_toRightOf="@+id/txt_data_año_date_time"
+                    android:ems="4"
+                    android:enabled="false"
+                    android:inputType="number"
+                    tools:ignore="TextFields" />
+
+                <TextView
+                    android:id="@+id/txt_title_dia_date_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_subdivider_date_time"
+                    android:layout_alignStart="@+id/txt_data_dia_date_time"
+                    android:layout_marginTop="35dp"
+                    android:text="Dia:"
+                    android:textSize="12dp" />
+
+                <EditText
+                    android:id="@+id/txt_data_dia_date_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_title_mes_date_time"
+                    android:layout_marginLeft="18dp"
+                    android:layout_toRightOf="@+id/txt_data_mes_date_time"
+                    android:ems="4"
+                    android:enabled="false"
+                    android:inputType="number"
+                    tools:ignore="TextFields" />
+
+                <!-- Hora, minuto, segundo-->
+
+                <TextView
+                    android:id="@+id/txt_title_hora_date_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_data_año_date_time"
+                    android:layout_marginTop="15dp"
+                    android:text="Horas:"
+                    android:textSize="12dp" />
+
+                <EditText
+                    android:id="@+id/txt_data_hora_date_time_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_title_hora_date_time"
+                    android:ems="5"
+                    android:enabled="false"
+                    android:inputType="number"
+                    tools:ignore="TextFields" />
+
+                <TextView
+                    android:id="@+id/txt_title_minuto_date_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_data_mes_date_time"
+                    android:layout_alignStart="@+id/txt_data_mes_date_time"
+                    android:layout_marginTop="15dp"
+                    android:text="Minutos:"
+                    android:textSize="12dp" />
+
+                <EditText
+                    android:id="@+id/txt_data_minuto_date_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_title_minuto_date_time"
+                    android:layout_marginLeft="18dp"
+                    android:layout_toRightOf="@+id/txt_data_año_date_time"
+                    android:ems="4"
+                    android:enabled="false"
+                    android:inputType="number"
+                    tools:ignore="TextFields" />
+
+                <TextView
+                    android:id="@+id/txt_title_segundo_date_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_data_dia_date_time"
+                    android:layout_alignStart="@+id/txt_data_dia_date_time"
+                    android:layout_marginTop="15dp"
+                    android:text="Segundos:"
+                    android:textSize="12dp" />
+
+                <EditText
+                    android:id="@+id/txt_data_segundo_date_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_title_segundo_date_time"
+                    android:layout_marginLeft="18dp"
+                    android:layout_toRightOf="@+id/txt_data_mes_date_time"
+                    android:ems="4"
+                    android:enabled="false"
+                    android:inputType="number"
+                    tools:ignore="TextFields" />
+
+                <TextView
+                    android:id="@+id/info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_data_segundo_date_time"
+                    android:layout_above="@+id/btn_save_date_time"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/info_config_reset"/>
+
+                <Button
+                    android:id="@+id/btn_save_date_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/colorPrimary"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:text="Enviar"
+                    android:onClick="fncBtnSave"/>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</RelativeLayout>

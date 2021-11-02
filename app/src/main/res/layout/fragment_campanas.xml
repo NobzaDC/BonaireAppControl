@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.campanas.CampanasFragment">
+
+    <ImageView
+        android:id="@+id/img_logo_campanas"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        app:srcCompat="@drawable/logo_bonaire_app"
+        android:background="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/divider_header_campanas"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/img_logo_campanas"
+        android:background="@android:color/black"/>
+
+    <ListView
+        android:id="@+id/lv_campanas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/divider_header_campanas"
+        android:animateLayoutChanges="true"
+        android:visibility="invisible"
+        android:layout_marginBottom="70dp"/>
+
+    <ImageView
+        android:id="@+id/image_backgroud_campanas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/divider_header_campanas"
+        app:srcCompat="@drawable/img_p_agregar" />
+
+    <ProgressBar
+        android:id="@+id/progressBar_campanas"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:visibility="visible" />
+
+
+</RelativeLayout>

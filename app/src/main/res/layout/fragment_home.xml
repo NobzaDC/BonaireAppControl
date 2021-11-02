@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment"
+    android:background="#ccc">
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayoutHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:paddingRight="3dp">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/radio_group"
+            android:src="@drawable/logo_bonaire_app_sin_rs" />
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:src="@drawable/ico_bluetooth" />
+
+            <RadioButton
+                android:id="@+id/rb_conexion_bluetooth_home"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ico_wifi" />
+
+            <RadioButton
+                android:id="@+id/rb_conexion_internet_home"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:checked="true" />
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/RelativeLayoutHome"
+        app:srcCompat="@drawable/img_p_agregar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_equipos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/RelativeLayoutHome"
+        android:layout_marginBottom="57dp"/>
+
+
+</RelativeLayout>
